@@ -1,0 +1,4 @@
+data/abc.jpg: Predicted in 10.376884 seconds.
+Weissbier: 3%
+long sleeve: 5%
+hipflask: 1%
