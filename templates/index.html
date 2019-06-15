@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mood Hash</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="/static/img/favicon.png" rel="icon">
+  <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="/static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="/static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="/static/style.css" rel="stylesheet">
+
+
+  <!-- =======================================================
+    Theme Name: Regna
+    Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+  <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+</head>
+
+   <body>
+   <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a href="#hero"><img src="/static/img/logo.png" width="200px" height="200px" alt="" title="" /></img></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="#hero">Regna</a></h1>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">hash?</a></li>
+          <li><a href="#about">#tag</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Welcome to #moodhash</h1>
+      <h2>We help you in finding hashtags for your instagram posts</h2>
+      <a href="#about" class="btn-get-started">Get Started</a>
+    </div>
+  </section><!-- #hero -->
+   <main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+
+    <!--==========================
+      Facts Section
+    ============================-->
+    <section id="facts">
+      <div class="container wow fadeIn">
+        <div class="section-header">
+          <h3 class="section-title"> #moodhash </h3>
+          <p class="section-description">Upload your image and enter your caption to generate hashtags.</p>
+
+          <div class="container" align="center">
+          <div class="col-md-6">
+    <div class="form-group">
+      <form action = "http://localhost:5000/uploader" method = "POST"
+         enctype = "multipart/form-data">
+        <label>Upload Image</label>
+        <div class="input-group">
+
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+          <br><br>
+        </div>
+      </form>
+      <textarea class="form-control form-rounded" rows="3">
+        {{ y }} 
+           </textarea>
+        <img id="img-upload"/>
+    </div>
+    <form action = "http://localhost:5000/caption" method = "POST"
+         enctype = "multipart/form-data">
+     <label>Enter Caption</label>
+        <div class="input-group">
+
+            <input type="text" class="form-control"  name="caption">
+            <input type = "submit"/>
+        </div>
+        <br><br>
+      </form>
+       <div class="container">
+       	<br><br>
+
+  <textarea class="form-control form-rounded" rows="3">
+    {{ xx }}
+  </textarea>
+    </div>
+
+
+    <form action = "http://localhost:5000/tags" method = "POST"
+         enctype = "multipart/form-data">
+     <label>Enter Tags</label>
+        <div class="input-group">
+
+            <input type="text" class="form-control"  name="tags">
+            <input type = "submit"/>
+        </div>
+        <br><br>
+      </form>
+      <br>
+      <br>
+      
+       <div class="container">
+        <br><br>
+
+  <textarea class="form-control form-rounded" rows="3">
+    {{ final }}
+  </textarea>
+
+
+  <br/>
+        <form action="http://localhost:5000/finaltags" method="POST">
+        <br><br>
+      <input type = "submit"/>
+       <div class="container">
+        <br><br>
+        </form>
+          <textarea class="form-control form-rounded" rows="3">
+
+  </textarea>
+
+
+
+</div>
+</div>
+
+
+      
+</div>
+</div></div>
+
+
+    </section><!-- #facts -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+
+
+
+  </main>
+   <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+            <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+        -->
+        Designed and Maintained by <a href="https://bootstrapmade.com/">Anonymous (CodeAsylums Hackathon Team)</a>
+      </div>
+    </div>
+  </footer>
+   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+   </body>
+</html>
