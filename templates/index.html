@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
   <title>Mood Hash</title>
@@ -8,21 +8,21 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="static/img/favicon.png" rel="icon">
-  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="/static/img/favicon.png" rel="icon">
+  <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="/static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="static/style.css" rel="stylesheet">
+  <link href="/static/style.css" rel="stylesheet">
 
 
   <!-- =======================================================
@@ -31,19 +31,17 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  
+  <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
 
 </head>
 
-<body>
-
-  <!--==========================
-  Header
-  ============================-->
-  <header id="header">
+   <body>
+   <header id="header">
     <div class="container">
 
       <div id="logo" class="pull-left">
@@ -71,13 +69,12 @@
       <a href="#about" class="btn-get-started">Get Started</a>
     </div>
   </section><!-- #hero -->
-
-  <main id="main">
+   <main id="main">
 
     <!--==========================
       About Us Section
     ============================-->
-   
+
     <!--==========================
       Facts Section
     ============================-->
@@ -85,42 +82,43 @@
       <div class="container wow fadeIn">
         <div class="section-header">
           <h3 class="section-title"> #moodhash </h3>
-          <p class="section-description">Upload you image and caption to generate hashtags.</p>
-          
-          <div class="container" align="center"> 
-<div class="col-md-6">
+          <p class="section-description">Upload your image and enter your caption to generate hashtags.</p>
+
+          <div class="container" align="center">
+      <form action = "http://localhost:5000/uploader" method = "POST"
+         enctype = "multipart/form-data">
+          <div class="col-md-6">
     <div class="form-group">
         <label>Upload Image</label>
         <div class="input-group">
-            <span class="input-group-btn">
-                <span class="btn btn-default btn-file">
-                    Browse… <input type="file" id="imgInp">
-                </span>
-            </span><br>
-            <input type="text" class="form-control" readonly>
+
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+            <br>
         </div>
-       
+
         <img id='img-upload'/>
     </div>
-     <label>Upload Caption</label>
+     <label>Enter Caption</label>
         <div class="input-group">
-           
+
             <input type="text" class="form-control" >
         </div>
         <br><br>
        <button type="button" class="btn btn-secondary">Generate</button>
        <div class="container">
        	<br><br>
-  
+
   <textarea class="form-control form-rounded" rows="3"></textarea>
   <br />
 
 
 
-  
-  
+
+
 </div>
 </div>
+      </form>
 </div>
 </div></div>
 
@@ -130,15 +128,11 @@
     <!--==========================
       Services Section
     ============================-->
-    
+
 
 
   </main>
-
-  <!--==========================
-    Footer
-  ============================-->
-  <footer id="footer">
+   <footer id="footer">
     <div class="footer-top">
       <div class="container">
 
@@ -156,26 +150,7 @@
         Designed and Maintained by <a href="https://bootstrapmade.com/">Anonymous (CodeAsylums Hackathon Team)</a>
       </div>
     </div>
-  </footer><!-- #footer -->
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-
-</body>
+  </footer>
+   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+   </body>
 </html>
