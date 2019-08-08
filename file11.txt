@@ -1,4 +1,5 @@
-data/abc.jpg: Predicted in 10.376884 seconds.
-Weissbier: 3%
-long sleeve: 5%
-hipflask: 1%
+data/team-1.jpg: Predicted in 10.356425 seconds.
+cellular telephone: 1%
+canyon oak: 1%
+stubble: 16%
+Abyssinian: 4%
